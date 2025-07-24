@@ -1,1 +1,1 @@
-# folder-picker
+# folder-picker (📁⛏️)
