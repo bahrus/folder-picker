@@ -14,12 +14,12 @@ export const emc = {
             mapsTo: '.'
         }
     },
-    enhPropKey: 'beDirective',
+    enhPropKey: 'folderPicker',
     importEnh: async () => {
-    const {BeDirective} = /** @type {{new(): IEnhancement<Element>}} */ 
+        const {FolderPicker} = /** @type {{new(): IEnhancement<Element>}} */ 
         /** @type {any} */
         (await import('./folder-picker.js'));
-        return BeDirective;
+        return FolderPicker;
     }
 };
 const mose = seed(emc);

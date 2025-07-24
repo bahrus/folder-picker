@@ -56,4 +56,4 @@ class FolderPicker extends BE {
 }
 
 await FolderPicker.bootUp();
-export { FolderPicker as BeDirective };
+export { FolderPicker };
