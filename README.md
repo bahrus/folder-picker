@@ -1,7 +1,7 @@
 # folder-picker (📁⛏️)
 
 ```html
-<button 📂⛏️>Pick directory</button>
+<button 📁⛏️>Pick directory</button>
 ```
 
 ## Viewing Locally
