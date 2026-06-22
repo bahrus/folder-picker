@@ -1,0 +1,38 @@
+{
+    "enhConfig": {
+        "enhKey": "📁⛏️",
+        "spawn": "folder-picker/folder-picker.js",
+        "withAttrs": {
+            "base": "📁⛏️",
+            "noNudge": "${base}-no-nudge",
+            "_noNudge": {
+                "instanceOf": "Boolean"
+            },
+            "_base": {
+                "instanceOf": "Object",
+                "mapsTo": "."
+            }
+        }
+    },
+    "customData": {
+        "weakRef": {
+            "properties": [
+                "enhancedElement"
+            ]
+        },
+        "actions": {
+            "hydrate": {
+                "ifAllOf": [
+                    "enhancedElement"
+                ]
+            }
+        },
+        "compacts": {
+            "when_resolved_changes_dispatch": "resolved"
+        },
+        "defaultPropVals": {
+            "noNudge": false,
+            "options": {}
+        }
+    }
+}

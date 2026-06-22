@@ -1,6 +1,6 @@
 {
   "name": "folder-picker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Enhance an HTML button so that it prompts the user to picka a local directory / folder and provides a reference to the chosen folder (FileSystemDirectoryHandle)",
   "homepage": "https://github.com/bahrus/folder-picker#readme",
   "bugs": {
@@ -13,22 +13,22 @@
   "license": "MIT",
   "author": "Bruce B Anderson (anderson.bruce.b@gmail.com)",
   "type": "module",
-  "main": "file-picker.js",
-  "module": "file-picker.js",
+  "main": "folder-picker.js",
+  "module": "folder-picker.js",
   "scripts": {
-    "serve": "python ./node_modules/ssi-server/ssi_server.py",
+    "build": "node emc.mjs > emc.json && node 📁⛏️.mjs > 📁⛏️.json",
+    "serve": "node ./node_modules/spa-ssi/serve.js",
     "test": "playwright test",
     "safari": "npx playwright wk http://localhost:8000",
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "be-enhanced": "0.0.186",
-    "be-hive": "0.0.265",
-    "mount-observer": "0.0.100",
-    "trans-render": "0.0.952"
+    "be-hive": "0.1.9",
+    "mount-observer": "0.0.16",
+    "roundabout-lib": "0.0.2"
   },
   "devDependencies": {
     "@playwright/test": "1.55.0",
-    "ssi-server": "0.0.1"
+    "spa-ssi": "0.0.1"
   }
 }
