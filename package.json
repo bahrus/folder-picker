@@ -1,6 +1,6 @@
 {
   "name": "folder-picker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Enhance an HTML button so that it prompts the user to picka a local directory / folder and provides a reference to the chosen folder (FileSystemDirectoryHandle)",
   "homepage": "https://github.com/bahrus/folder-picker#readme",
   "bugs": {
