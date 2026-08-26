@@ -9,7 +9,7 @@
  * @implements {Actions}
  * @implements {EventListenerObject}
  */
-class FolderPicker {
+class FolderPicker extends EventTarget {
 
     /**
      * @this {AllProps & Actions}
@@ -18,6 +18,7 @@ class FolderPicker {
      * @param {PAP} initVals 
      */
     constructor(enhancedElement, ctx, initVals){
+        super();
         this.init(this, enhancedElement, ctx, initVals);
     }
 
@@ -60,7 +61,7 @@ class FolderPicker {
         const { noNudge, enhancedElement } = self;
         enhancedElement.addEventListener('click', this);
         if(!noNudge){
-            (await import('mount-observer/nudge.js')).nudge(enhancedElement);
+            (await import('assign-gingerly/handlers/nudge.js')).nudge(enhancedElement);
         }
         return /** @type {PAP} */ ({
             resolved: true,

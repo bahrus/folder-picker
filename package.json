@@ -23,12 +23,12 @@
     "update": "ncu -u && npm install"
   },
   "dependencies": {
-    "be-hive": "0.1.15",
-    "mount-observer": "0.1.41",
-    "roundabout-lib": "0.0.23"
+    "be-hive": "0.1.16",
+    "mount-observer": "0.1.51",
+    "roundabout-lib": "0.0.35"
   },
   "devDependencies": {
-    "@playwright/test": "1.61.0",
+    "@playwright/test": "1.62.1",
     "spa-ssi": "0.0.27"
   }
 }
