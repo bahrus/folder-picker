@@ -15,6 +15,13 @@
   "type": "module",
   "main": "folder-picker.js",
   "module": "folder-picker.js",
+  "exports": {
+    ".": "./folder-picker.js",
+    "./folder-picker.js": "./folder-picker.js",
+    "./def.js": "./def.js",
+    "./emc.json": "./emc.json",
+    "./📁⛏️.json": "./📁⛏️.json"
+  },
   "scripts": {
     "build": "node emc.mjs > emc.json && node 📁⛏️.mjs > 📁⛏️.json",
     "serve": "node ./node_modules/spa-ssi/serve.js",
@@ -23,6 +30,7 @@
     "update": "ncu -u && npm install"
   },
   "dependencies": {
+    "assign-gingerly": "0.0.97",
     "be-hive": "0.1.18",
     "mount-observer": "0.1.53",
     "roundabout-lib": "0.0.38"

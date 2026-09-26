@@ -20,10 +20,15 @@
                 "enhancedElement"
             ]
         },
+        "propagate": [
+            "noNudge",
+            "options"
+        ],
         "actions": {
             "hydrate": {
                 "ifAllOf": [
-                    "enhancedElement"
+                    "enhancedElement",
+                    "initialized"
                 ]
             }
         },

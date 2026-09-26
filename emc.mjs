@@ -9,7 +9,7 @@
  */
 export const emc = {
     enhConfig: {
-        enhKey: 'FolderPicker',
+        enhKey: 'folderPicker',
         spawn: 'folder-picker/folder-picker.js',
         withAttrs: {
             base: 'folder-picker',
@@ -27,9 +27,14 @@ export const emc = {
         weakRef: {
             properties: ['enhancedElement']
         },
+        // Neither prop is read by an action/compact condition, so roundabout
+        // wouldn't otherwise monitor them -- and an unmonitored prop set
+        // programmatically before spawn finishes gets clobbered by
+        // defaultPropVals at the end of roundabout().
+        propagate: ['noNudge', 'options'],
         actions: {
             hydrate: {
-                ifAllOf: ['enhancedElement']
+                ifAllOf: ['enhancedElement', 'initialized']
             }
         },
         compacts: {

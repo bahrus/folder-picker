@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmatic imperative</title>
+    <!-- #include virtual="/imports.html" -->
+</head>
+<body>
+    <button id="button" disabled>Pick directory</button>
+    <p>After picking, inspect <code>button.enh.folderPicker.directoryHandle</code> in devtools.</p>
+    <script type=module>
+        import {defFolderPicker} from '/def.js';
+        const emc = await defFolderPicker(document.body);
+        const folderPicker = button.enh.get(emc);
+        folderPicker.options = {id: 'programmatic-demo', mode: 'read'};
+    </script>
+</body>
+</html>

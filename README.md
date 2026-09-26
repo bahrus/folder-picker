@@ -101,6 +101,34 @@ Or with the emoji shorthand:
 </script>
 ```
 
+## Programmatic Attachment (No Attributes)
+
+In client-side-rendered apps, setting attributes (and stringifying JSON into them) is clumsy. The enhancement can be attached without any attribute at all. First register its config once via `def.js`:
+
+```JS
+import { defFolderPicker } from 'folder-picker/def.js';
+const emc = await defFolderPicker(document.body); // or a shadow root's host, for a scoped registry
+```
+
+### Declarative -- via `enh.set`
+
+```JS
+// only the first write needs to go through .set -- it triggers attachment
+button.enh.set.folderPicker.options = {id: 'project-root', mode: 'readwrite'};
+```
+
+This is order-independent: `.set` may be used *before* `defFolderPicker` has registered the config; the spawn is deferred until it does.
+
+### Imperative -- via `enh.get()`
+
+```JS
+const folderPicker = button.enh.get(emc);
+folderPicker.options = {id: 'project-root', mode: 'readwrite'};
+folderPicker.noNudge = true; // optional
+```
+
+Either way, once a folder is picked, the handle is available as `button.enh.folderPicker.directoryHandle`. See [demo/Programmatic/](demo/Programmatic/) for runnable examples.
+
 ## Importing in ES Modules
 
 ```javascript
